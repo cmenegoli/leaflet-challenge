@@ -16,8 +16,7 @@ var graymap = L.tileLayer(
 
 // map object with options
 var map = L.map("map", {
-  center: [
-    40.7, -94.5
+  center: [40.7, -94.5
   ],
   zoom: 3
 });
@@ -26,7 +25,7 @@ var map = L.map("map", {
 graymap.addTo(map);
 
 // // make an AJAX call that retrieves our earthquake geoJSON data (1 month data)
-d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson").then(function(data) {
+d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
 
 
   // we take coordinates and mag from json - the earthquake file above
